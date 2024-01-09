@@ -176,6 +176,7 @@ proxy-groups:
       - IKD
       - UAS id
       - Ovh1
+      - BEST PING
       - LOAD-BALANCE
       - FALLBACK
   - name: FALLBACK
