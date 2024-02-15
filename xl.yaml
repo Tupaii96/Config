@@ -132,7 +132,7 @@ proxies:
     type: trojan
     server: 104.18.225.52
     port: 443
-    password: data123
+    password: d500e0f4-6dbc-47dc-b7a9-f15808242699
     udp: true
     sni: trojan-ikd-id01.globalssh.xyz
     skip-cert-verify: true
@@ -142,11 +142,11 @@ proxies:
       headers:
         Host: trojan-ikd-id01.globalssh.xyz
 
-  - name: Ovh1
+  - name: GS
     type: trojan
     server: 104.18.225.52
     port: 443
-    password: 9f0f1e8e-6c82-4dd4-bc82-1231377e1706
+    password: 9dad4912-d36e-4cfb-a282-6423c35f7d47
     udp: true
     sni: trojan-sg01.globalssh.xyz
     skip-cert-verify: true
@@ -160,7 +160,7 @@ proxies:
     type: trojan
     server: 104.18.225.52
     port: 443
-    password: data123
+    password: data1234
     udp: true
     sni: trojan-uas-id01.globalssh.xyz
     skip-cert-verify: true
@@ -175,7 +175,7 @@ proxy-groups:
     proxies:
       - IKD
       - UAS id
-      - Ovh1
+      - GS
       - BEST PING
       - LOAD-BALANCE
       - FALLBACK
@@ -185,7 +185,7 @@ proxy-groups:
     interval: 120
     proxies: 
       - UAS id
-      - Ovh1
+      - GS
       - IKD
   - name: BEST PING
     type: url-test
@@ -194,7 +194,7 @@ proxy-groups:
     tolerance: 60
     proxies: 
       - UAS id
-      - Ovh1
+      - GS
       - IKD
   - name: LOAD-BALANCE
     type: load-balance
@@ -203,7 +203,7 @@ proxy-groups:
     interval: 120
     proxies: 
       - UAS id
-      - Ovh1
+      - GS
       - IKD
 rules:
   - MATCH,MAIN
