@@ -128,19 +128,21 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: ID-IKD
-    type: trojan
-    server: 104.18.2.2
+  - name: OCEAN
+    server: 104.18.3.2
     port: 443
-    password: baead37a-b82a-42ef-a9fa-1e2b52214168
-    udp: true
-    sni: trojan-ikd-id01.globalssh.xyz
+    type: vless
+    uuid: 6d26ac6e-062e-4d41-86c0-6f832e264289
+    cipher: auto
+    tls: true
     skip-cert-verify: true
+    servername: sg1.v2vless.xyz
     network: ws
-    ws-opts:
-      path: /trojan-ws
-      headers:
-        Host: trojan-ikd-id01.globalssh.xyz
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: sg1.v2vless.xyz
+    udp: true
 
   - name: SG-GS
     type: trojan
@@ -189,13 +191,13 @@ proxy-groups:
   - name: MAIN
     type: select
     proxies:
-      - ID-IKD
+      - OCEAN
       - ID-UAS
       - ID-WH
       - SG-GS
       - LOAD-BALANCE
       - FALLBACK
-  - name: FALLBACK
+  - name: BEST-PING
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
@@ -204,7 +206,7 @@ proxy-groups:
       - ID-UAS
       - ID-WH
       - SG-GS
-      - ID-IKD
+      - OCEAN
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
@@ -214,6 +216,6 @@ proxy-groups:
       - ID-UAS
       - ID-WH
       - SG-GS
-      - ID-IKD
+      - OCEAN
 rules:
   - MATCH,MAIN
