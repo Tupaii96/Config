@@ -196,7 +196,7 @@ proxy-groups:
       - ID-WH
       - SG-GS
       - LOAD-BALANCE
-      - FALLBACK
+      - BEST-PING
   - name: BEST-PING
     type: url-test
     url: http://www.gstatic.com/generate_204
