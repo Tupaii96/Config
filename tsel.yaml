@@ -185,12 +185,28 @@ proxies:
       path: /trojan
       headers:
         Host: xray.josvpn.me
-      
+        
+  - name: ID-MAIN
+    server: 104.18.3.2
+    port: 443
+    type: vless
+    uuid: 51fb7dca-6611-4171-b22f-23c4040ab816
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: idlws.mainssh.xyz
+    udp: true
  
 proxy-groups:
   - name: MAIN
     type: select
     proxies:
+      - ID-MAIN
       - OCEAN
       - ID-UAS
       - XTR
@@ -203,6 +219,7 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies: 
+      - ID-MAIN
       - ID-UAS
       - XTR
       - SG-GS
@@ -212,7 +229,8 @@ proxy-groups:
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 120
-    proxies: 
+    proxies:
+      - ID-MAIN
       - ID-UAS
       - XTR
       - SG-GS
