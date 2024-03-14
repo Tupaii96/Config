@@ -172,7 +172,7 @@ proxies:
       headers:
         Host: trojan-uas-id01.globalssh.xyz
 
-  - name: ID-WH
+  - name: XTR
     type: trojan
     server: 104.18.2.2
     port: 443
@@ -193,7 +193,7 @@ proxy-groups:
     proxies:
       - OCEAN
       - ID-UAS
-      - ID-WH
+      - XTR
       - SG-GS
       - LOAD-BALANCE
       - BEST-PING
@@ -204,7 +204,7 @@ proxy-groups:
     tolerance: 50
     proxies: 
       - ID-UAS
-      - ID-WH
+      - XTR
       - SG-GS
       - OCEAN
   - name: LOAD-BALANCE
@@ -214,7 +214,7 @@ proxy-groups:
     interval: 120
     proxies: 
       - ID-UAS
-      - ID-WH
+      - XTR
       - SG-GS
       - OCEAN
 rules:
