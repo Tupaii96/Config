@@ -128,22 +128,6 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: OCEAN
-    server: 104.18.3.2
-    port: 443
-    type: vless
-    uuid: 6d26ac6e-062e-4d41-86c0-6f832e264289
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg1.v2vless.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: sg1.v2vless.xyz
-    udp: true
-
   - name: SG-GS
     type: trojan
     server: 104.18.2.2
@@ -207,7 +191,6 @@ proxy-groups:
     type: select
     proxies:
       - ID-MAIN
-      - OCEAN
       - ID-UAS
       - XTR
       - SG-GS
@@ -223,7 +206,6 @@ proxy-groups:
       - ID-UAS
       - XTR
       - SG-GS
-      - OCEAN
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
@@ -234,6 +216,5 @@ proxy-groups:
       - ID-UAS
       - XTR
       - SG-GS
-      - OCEAN
 rules:
   - MATCH,MAIN
