@@ -160,15 +160,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 61f4b1c5-4fb7-4847-a499-beedc6bab8de
+    password: da3d2c70-0b36-4810-bfa1-31ddc71034bd
     udp: true
-    sni: xray.josvpn.me
+    sni: trojan-ikd-id01.globalssh.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /trojan
+      path: /trojan-ws
       headers:
-        Host: xray.josvpn.me
+        Host: trojan-ikd-id01.globalssh.xyz
         
   - name: ID-MAIN
     server: 104.18.3.2
