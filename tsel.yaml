@@ -171,19 +171,19 @@ proxies:
         Host: trojan-ikd-id01.globalssh.xyz
         
   - name: ID-MAIN
-    server: 104.18.3.2
+    server: 104.18.2.2
     port: 443
     type: vless
-    uuid: 51fb7dca-6611-4171-b22f-23c4040ab816
+    uuid: 81b2ac5b-1f64-49f5-b9e6-3a53a400dc1a
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idlws.mainssh.xyz
+    servername: sglws.mainssh.xyz
     network: ws
     ws-opts: 
       path: /vless
       headers: 
-        Host: idlws.mainssh.xyz
+        Host: sglws.mainssh.xyz
     udp: true
  
 proxy-groups:
