@@ -185,12 +185,27 @@ proxies:
       headers: 
         Host: idlws.mainssh.xyz
     udp: true
+    
+  - name: TR-MAIN
+    server: 104.17.3.2
+    port: 443
+    type: trojan
+    password: mainssh-akitikd
+    skip-cert-verify: true
+    sni: idtws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: idtws.mainssh.xyz
+    udp: true
  
 proxy-groups:
   - name: MAIN
     type: select
     proxies:
       - ID-MAIN
+      - TR-MAIN
       - ID-UAS
       - XTR
       - SG-GS
