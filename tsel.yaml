@@ -174,16 +174,16 @@ proxies:
     server: 104.18.2.2
     port: 443
     type: vless
-    uuid: 81b2ac5b-1f64-49f5-b9e6-3a53a400dc1a
+    uuid: 83ebb6cf-3813-44ba-a10f-5ce182fceae3
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sglws.mainssh.xyz
+    servername: idlws.mainssh.xyz
     network: ws
     ws-opts: 
       path: /vless
       headers: 
-        Host: sglws.mainssh.xyz
+        Host: idlws.mainssh.xyz
     udp: true
  
 proxy-groups:
