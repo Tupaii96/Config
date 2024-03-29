@@ -174,7 +174,7 @@ proxies:
     server: 104.18.2.2
     port: 443
     type: vless
-    uuid: 83ebb6cf-3813-44ba-a10f-5ce182fceae3
+    uuid: 6da00429-b4b1-4689-96c4-25ea26c1b4b9
     cipher: auto
     tls: true
     skip-cert-verify: true
