@@ -160,7 +160,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 7c0b2790-038c-4355-9005-e05bf5cf4226
+    password: 63649154-edc2-405c-a670-d24e9536e077
     udp: true
     sni: xray.josvpn.me
     skip-cert-verify: true
