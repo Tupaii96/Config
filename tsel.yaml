@@ -174,16 +174,16 @@ proxies:
     server: 104.18.2.2
     port: 443
     type: vless
-    uuid: bdfc4299-2ce6-4eba-a3e0-d8431af48092
+    uuid: 709f4c7c-4cf6-4c87-a148-1ecf26cc61fd
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idlws.mainssh.xyz
+    servername: idray.serverip.my.id
     network: ws
     ws-opts: 
-      path: /vless
+      path: /serverssh
       headers: 
-        Host: idlws.mainssh.xyz
+        Host: idray.serverip.my.id
     udp: true
     
   - name: TR-MAIN
