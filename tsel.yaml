@@ -187,7 +187,7 @@ proxies:
     udp: true
     
   - name: WH
-    server: 104.18.62.203
+    server: 104.18.3.2
     port: 443
     type: trojan
     password: 2d9e7e47-3b3a-46a2-8995-2edb11cedcc2
