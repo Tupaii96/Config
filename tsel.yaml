@@ -186,21 +186,21 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
     
- - name: WH
-   server: 104.18.3.2
-   port: 443
-   type: vless
-   uuid: 687cfa56-50a5-463b-b026-a245ea23e665
-   cipher: auto
-   tls: true
-   skip-cert-verify: true
-   servername: vless-sg01.globalssh.xyz
-   network: ws
-   ws-opts: 
-     path: /vless-ws
-     headers: 
-       Host: vless-sg01.globalssh.xyz
-   udp: true
+  - name: WH
+    server: 104.18.3.2
+    port: 443
+    type: vless
+    uuid: 687cfa56-50a5-463b-b026-a245ea23e665
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vless-sg01.globalssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vless-ws
+      headers: 
+        Host: vless-sg01.globalssh.xyz
+    udp: true
  
 proxy-groups:
   - name: MAIN
