@@ -132,7 +132,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 9da8174f-283f-45fb-abac-ef0c93641306
+    password: ea3b0c37-89d3-4b47-abff-1f79d39aa911
     udp: true
     sni: trojan-sg01.globalssh.xyz
     skip-cert-verify: true
@@ -160,34 +160,32 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 70f935e9-138f-4dca-b040-42a5100bfc59
+    password: 025e028f-fa7d-46ff-b3c5-1d425a6f59ea
     udp: true
-    sni: xray.josvpn.me
+    sni: aray.josvpn.me
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /trojan
       headers:
-        Host: xray.josvpn.me
+        Host: aray.josvpn.me
         
-  - name: ID-MAIN
+  - name: ID-IKD
+    type: trojan
     server: 104.18.2.2
     port: 443
-    type: vless
-    uuid: 709f4c7c-4cf6-4c87-a148-1ecf26cc61fd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idray.serverip.my.id
-    network: ws
-    ws-opts: 
-      path: /serverssh
-      headers: 
-        Host: idray.serverip.my.id
+    password: 8266e2b1-9503-498d-ad73-dd98a52687b0
     udp: true
+    sni: trojan-ikd-id01.globalssh.xyz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: trojan-ikd-id01.globalssh.xyz.
     
-  - name: WH
-    server: 104.18.3.2
+  - name: ID-WH
+    server: 104.18.2.2
     port: 443
     type: vless
     uuid: 687cfa56-50a5-463b-b026-a245ea23e665
@@ -206,8 +204,8 @@ proxy-groups:
   - name: MAIN
     type: select
     proxies:
-      - ID-MAIN
-      - WH
+      - ID-IKD
+      - ID-WH
       - ID-UAS
       - XTR
       - SG-GS
@@ -219,8 +217,9 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies: 
-      - ID-MAIN
+      - ID-IKD
       - ID-UAS
+      - ID-WH
       - XTR
       - SG-GS
   - name: LOAD-BALANCE
@@ -230,6 +229,7 @@ proxy-groups:
     interval: 120
     proxies:
       - ID-MAIN
+      - ID-WH
       - ID-UAS
       - XTR
       - SG-GS
