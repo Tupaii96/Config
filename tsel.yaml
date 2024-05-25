@@ -160,7 +160,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 025e028f-fa7d-46ff-b3c5-1d425a6f59ea
+    password: f9aeb076-d20c-4d18-879a-aa5ac95afe6a
     udp: true
     sni: aray.josvpn.me
     skip-cert-verify: true
@@ -185,20 +185,18 @@ proxies:
         Host: trojan-ikd-id01.globalssh.xyz.
     
   - name: ID-WH
+    type: trojan
     server: 104.18.2.2
     port: 443
-    type: vless
-    uuid: 687cfa56-50a5-463b-b026-a245ea23e665
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vless-sg01.globalssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vless-ws
-      headers: 
-        Host: vless-sg01.globalssh.xyz
+    password: a348839e-f465-495e-8730-bbde82c4e80f
     udp: true
+    sni: trojan-wh-id01.globalssh.xyz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: trojan-wh-id01.globalssh.xyz.
  
 proxy-groups:
   - name: MAIN
