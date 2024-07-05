@@ -190,13 +190,13 @@ proxies:
     port: 443
     password: b3a80b32-0ab8-4f2f-a71b-29d0b710f964
     udp: true
-    sni: trojan-sis-jp01.globalssh.xyz
+    sni: trojan-wh-id01.globalssh.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /trojan-ws
       headers:
-        Host: trojan-sis-jp01.globalssh.xyz.
+        Host: trojan-wh-id01.globalssh.xyz
  
 proxy-groups:
   - name: MAIN
