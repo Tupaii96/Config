@@ -174,7 +174,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: d14e4059-97ac-476f-b860-34c9c3e6426b
+    password: d3c9d7c3-b7d0-4e1b-82e7-244994717434
     udp: true
     sni: trojan-ikd-id01.globalssh.xyz
     skip-cert-verify: true
@@ -188,7 +188,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 7bc5ba22-dbae-4e29-853f-29c7781970a8
+    password: b3a80b32-0ab8-4f2f-a71b-29d0b710f964
     udp: true
     sni: trojan-sis-jp01.globalssh.xyz
     skip-cert-verify: true
