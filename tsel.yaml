@@ -198,21 +198,21 @@ proxies:
       headers:
         Host: trojan-wh-id01.globalssh.xyz
 
- - name: netq
-   server: 104.18.3.2
-   port: 443
-   type: vless
-   uuid: 1ce178ef-bcb5-4041-af9b-96ef49271b7e
-   cipher: auto
-   tls: true
-   skip-cert-verify: true
-   servername: id-free-netq.hijitoko.com
-   network: ws
-   ws-opts: 
-     path: /vless
-     headers: 
-       Host: id-free-netq.hijitoko.com
-  udp: true
+  - name: netq
+    server: 104.18.3.2
+    port: 443
+    type: vless
+    uuid: 1ce178ef-bcb5-4041-af9b-96ef49271b7e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id-free-netq.hijitoko.com
+    network: ws
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: id-free-netq.hijitoko.com
+   udp: true
 proxy-groups:
   - name: MAIN
     type: select
