@@ -197,6 +197,7 @@ proxies:
       path: /trojan-ws
       headers:
         Host: trojan-wh-id01.globalssh.xyz
+
  - name: netq
    server: 104.18.3.2
    port: 443
