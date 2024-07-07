@@ -197,7 +197,21 @@ proxies:
       path: /trojan-ws
       headers:
         Host: trojan-wh-id01.globalssh.xyz
- 
+ - name: netq
+   server: 104.18.3.2
+   port: 443
+   type: vless
+   uuid: 1ce178ef-bcb5-4041-af9b-96ef49271b7e
+   cipher: auto
+   tls: true
+   skip-cert-verify: true
+   servername: id-free-netq.hijitoko.com
+   network: ws
+   ws-opts: 
+     path: /vless
+     headers: 
+       Host: id-free-netq.hijitoko.com
+  udp: true
 proxy-groups:
   - name: MAIN
     type: select
@@ -206,6 +220,7 @@ proxy-groups:
       - ID-WH
       - ID-UAS
       - XTR
+      - netq
       - SG-GS
       - LOAD-BALANCE
       - BEST-PING
@@ -219,6 +234,7 @@ proxy-groups:
       - ID-UAS
       - ID-WH
       - XTR
+      - netq
       - SG-GS
   - name: LOAD-BALANCE
     type: load-balance
@@ -227,6 +243,7 @@ proxy-groups:
     interval: 120
     proxies:
       - ID-WH
+      - netq
       - ID-UAS
       - XTR
       - SG-GS
