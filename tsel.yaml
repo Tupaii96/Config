@@ -160,15 +160,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: e9a27d1c-2b75-42c2-90ac-4bb16d6a6022
+    password: 3e3d055c-2f92-4bb6-85cb-20b4173738b2
     udp: true
-    sni: xray.josvpn.me
+    sni: aray.okgas.me
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /trojan
       headers:
-        Host: xray.josvpn.me
+        Host: aray.okgas.me
         
   - name: ID-IKD
     type: trojan
