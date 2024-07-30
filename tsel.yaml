@@ -160,7 +160,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 3e3d055c-2f92-4bb6-85cb-20b4173738b2
+    password: 59cdb741-bbce-4d02-b000-caf025547534
     udp: true
     sni: aray.okgas.me
     skip-cert-verify: true
