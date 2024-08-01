@@ -188,15 +188,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 081d830f-de37-45d6-ab9a-3f103525c74f
+    password: 03a0309f-7e15-4054-9544-14e718a84ec5
     udp: true
-    sni: trojan-wh-id01.globalssh.xyz
+    sni: trojan-sis-jp01.globalssh.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /trojan-ws
       headers:
-        Host: trojan-wh-id01.globalssh.xyz
+        Host: trojan-sis-jp01.globalssh.xyz
 
   - name: netq
     server: 104.18.3.2
