@@ -198,18 +198,17 @@ proxies:
       headers:
         Host: trojan-sis-jp01.globalssh.xyz
 
+
   - name: netq
-    server: 104.18.3.2
+    server: 104.18.2.2
     port: 443
-    type: vless
-    uuid: bdc4d783-fd22-4987-a643-675cba692234
-    cipher: auto
-    tls: true
+    type: trojan
+    password: client
     skip-cert-verify: true
-    servername: id-free-netq.hijitoko.com
+    sni: id-free-netq.hijitoko.com
     network: ws
     ws-opts: 
-      path: /vless
+      path: /trojan
       headers: 
         Host: id-free-netq.hijitoko.com
     udp: true
