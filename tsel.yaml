@@ -132,7 +132,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 02330bb7-0ebe-4d71-9c04-0dc46e7cd6a2
+    password: 8aa7d72e-d798-45ac-900e-fc09a60f5e71
     udp: true
     sni: trojan-sg01.globalssh.xyz
     skip-cert-verify: true
