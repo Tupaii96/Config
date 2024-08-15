@@ -132,7 +132,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 8aa7d72e-d798-45ac-900e-fc09a60f5e71
+    password: 76ff8bd2-3332-40aa-875d-cbf90ec79878
     udp: true
     sni: trojan-sg01.globalssh.xyz
     skip-cert-verify: true
@@ -160,21 +160,21 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 59cdb741-bbce-4d02-b000-caf025547534
+    password: 9a80a473-2a3d-4f09-b393-2e9f4eed4124
     udp: true
-    sni: aray.okgas.me
+    sni: xray.okgas.me
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /trojan
       headers:
-        Host: aray.okgas.me
+        Host: xray.okgas.me
         
   - name: ID-IKD
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 538d3e0c-810c-4236-8fa2-fa3fd94f2274
+    password: a3deba12-0cbe-43cf-89a7-360b7d716512
     udp: true
     sni: trojan-ikd-id01.globalssh.xyz
     skip-cert-verify: true
