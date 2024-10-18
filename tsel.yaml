@@ -132,7 +132,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 0e5bd1ba-7886-4e33-8d1c-95c39a9b0e9d
+    password: 468a2e9d-ec98-4f57-b34b-53a4c8a3a535
     udp: true
     sni: trojan-sg01.globalssh.xyz
     skip-cert-verify: true
@@ -155,26 +155,12 @@ proxies:
       path: /trojan-ws
       headers:
         Host: trojan-uas-id01.globalssh.xyz
-
-  - name: XTR
-    type: trojan
-    server: 104.18.2.2
-    port: 443
-    password: 9a80a473-2a3d-4f09-b393-2e9f4eed4124
-    udp: true
-    sni: xray.okgas.me
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /trojan
-      headers:
-        Host: xray.okgas.me
         
   - name: ID-IKD
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 547e04cd-4825-4a38-832d-f4d6cebef31d
+    password: 615113b8-cf08-4288-a7d6-3ead22ebb8c0
     udp: true
     sni: trojan-ikd-id01.globalssh.xyz
     skip-cert-verify: true
@@ -188,7 +174,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 5e0e9df4-1eca-4c0e-9055-91da782875bb
+    password: cfc9be1e-4dec-4c7e-8a18-b44b9e7aec7a
     udp: true
     sni: trojan-sis-jp01.globalssh.xyz
     skip-cert-verify: true
@@ -199,19 +185,6 @@ proxies:
         Host: trojan-sis-jp01.globalssh.xyz
 
 
-  - name: netq
-    server: 104.18.2.2
-    port: 443
-    type: trojan
-    password: client
-    skip-cert-verify: true
-    sni: id-free-netq.hijitoko.com
-    network: ws
-    ws-opts: 
-      path: /trojan
-      headers: 
-        Host: id-free-netq.hijitoko.com
-    udp: true
 proxy-groups:
   - name: MAIN
     type: select
@@ -219,8 +192,6 @@ proxy-groups:
       - ID-IKD
       - ID-WH
       - ID-UAS
-      - XTR
-      - netq
       - SG-GS
       - LOAD-BALANCE
       - BEST-PING
@@ -233,8 +204,6 @@ proxy-groups:
       - ID-IKD
       - ID-UAS
       - ID-WH
-      - XTR
-      - netq
       - SG-GS
   - name: LOAD-BALANCE
     type: load-balance
@@ -243,9 +212,7 @@ proxy-groups:
     interval: 120
     proxies:
       - ID-WH
-      - netq
       - ID-UAS
-      - XTR
       - SG-GS
 rules:
   - MATCH,MAIN
