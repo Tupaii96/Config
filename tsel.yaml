@@ -146,15 +146,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: data1234
+    password: jagoanssh-danuid
     udp: true
-    sni: trojan-uas-id01.globalssh.xyz
+    sni: id1go.ipservers.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /trojan
       headers:
-        Host: trojan-uas-id01.globalssh.xyz
+        Host: id1go.ipservers.xyz
         
   - name: ID-IKD
     type: trojan
