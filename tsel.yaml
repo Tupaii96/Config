@@ -128,71 +128,42 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: SG-GS
+  - name: PREMIUM 1
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 0e5bd1ba-7886-4e33-8d1c-95c39a9b0e9d
+    password: bda2d5aa-12bd-405a-842a-7a413c926770
     udp: true
-    sni: trojan-sg01.globalssh.xyz
+    sni: sg01.iptr.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: "/trojan-ws"
       headers:
-        Host: trojan-sg01.globalssh.xyz
+        Host: sg01.iptr.xyz
 
-  - name: ID-UAS
-    type: trojan
+  - name: PREMIUM 2
     server: 104.18.2.2
     port: 443
-    password: jagoanssh-danuid
-    udp: true
-    sni: id1go.ipservers.xyz
+    type: vless
+    uuid: e41c2e98-3de4-40de-af57-3503275e6dc9
+    cipher: auto
+    tls: true
     skip-cert-verify: true
+    servername: id5.nekotun.com
     network: ws
-    ws-opts:
-      path: /trojan
-      headers:
-        Host: id1go.ipservers.xyz
-        
-  - name: ID-IKD
-    type: trojan
-    server: 104.18.2.2
-    port: 443
-    password: 18504771-a950-4dc6-bca3-dccfa25d784c
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: id5.nekotun.com
     udp: true
-    sni: trojan-ikd-id01.globalssh.xyz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /trojan-ws
-      headers:
-        Host: trojan-ikd-id01.globalssh.xyz.
-    
-  - name: ID-WH
-    type: trojan
-    server: 104.18.2.2
-    port: 443
-    password: cfc9be1e-4dec-4c7e-8a18-b44b9e7aec7a
-    udp: true
-    sni: trojan-sis-jp01.globalssh.xyz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /trojan-ws
-      headers:
-        Host: trojan-sis-jp01.globalssh.xyz
-
 
 proxy-groups:
   - name: MAIN
     type: select
     proxies:
-      - ID-IKD
-      - ID-WH
-      - ID-UAS
-      - SG-GS
+      - PREMIUM 1
+      - PREMIUM 2
       - LOAD-BALANCE
       - BEST-PING
   - name: BEST-PING
@@ -201,18 +172,15 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies: 
-      - ID-IKD
-      - ID-UAS
-      - ID-WH
-      - SG-GS
+      - PREMIUM 1
+      - PREMIUM 2
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 120
     proxies:
-      - ID-WH
-      - ID-UAS
-      - SG-GS
+      - PREMIUM 1
+      - PREMIUM 2
 rules:
   - MATCH,MAIN
