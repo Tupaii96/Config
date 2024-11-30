@@ -132,31 +132,29 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: bda2d5aa-12bd-405a-842a-7a413c926770
+    password: jagoanssh-tupaiid
     udp: true
-    sni: sg01.iptr.xyz
+    sni: id2go.ipservers.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: "/trojan-ws"
+      path: "/trojan"
       headers:
-        Host: sg01.iptr.xyz
+        Host: id2go.ipservers.xyz
 
   - name: PREMIUM 2
+    type: trojan
     server: 104.18.2.2
     port: 443
-    type: vless
-    uuid: e41c2e98-3de4-40de-af57-3503275e6dc9
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id5.nekotun.com
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: id5.nekotun.com
+    password: jagoanssh-danuid
     udp: true
+    sni: id2go.ipservers.xyz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: id2go.ipservers.xyz
 
 proxy-groups:
   - name: MAIN
