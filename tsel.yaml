@@ -128,7 +128,7 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: PREMIUM 1
+  - name: JAGOAN 1
     type: trojan
     server: 104.18.2.2
     port: 443
@@ -142,7 +142,7 @@ proxies:
       headers:
         Host: id2go.ipservers.xyz
 
-  - name: PREMIUM 2
+  - name: JAGOAN 2
     type: trojan
     server: 104.18.2.2
     port: 443
@@ -160,8 +160,8 @@ proxy-groups:
   - name: MAIN
     type: select
     proxies:
-      - PREMIUM 1
-      - PREMIUM 2
+      - JAGOAN 1
+      - JAGOAN 2
       - LOAD-BALANCE
       - BEST-PING
   - name: BEST-PING
@@ -170,15 +170,15 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies: 
-      - PREMIUM 1
-      - PREMIUM 2
+      - JAGOAN 1
+      - JAGOAN 2
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 120
     proxies:
-      - PREMIUM 1
-      - PREMIUM 2
+      - JAGOAN 1
+      - JAGOAN 2
 rules:
   - MATCH,MAIN
