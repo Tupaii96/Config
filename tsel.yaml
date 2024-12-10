@@ -146,15 +146,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: jagoanssh-danuuid
+    password: 398d7b26-c5cc-4717-b433-3d6cab2f26d5
     udp: true
-    sni: id1go.ipservers.xyz
+    sni: trojan-sis-jp01.globalssh.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: "/trojan"
+      path: "/trojan-ws"
       headers:
-        Host: id1go.ipservers.xyz
+        Host: trojan-sis-jp01.globalssh.xyz
 
 proxy-groups:
   - name: MAIN
