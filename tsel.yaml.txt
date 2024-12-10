@@ -150,12 +150,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id5.nekotun.com
+    servername: id5.fastw.us
     network: ws
     ws-opts: 
       path: /vless
       headers: 
-        Host: id5.nekotun.com
+        Host: id5.fastw.us
     udp: true
 
 proxy-groups:
