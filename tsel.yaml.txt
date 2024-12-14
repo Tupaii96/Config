@@ -134,13 +134,13 @@ proxies:
     port: 443
     password: bda2d5aa-12bd-405a-842a-7a413c926770
     udp: true
-    sni: sg01.iptr.xyz
+    sni: tro-sg04.gproxy.pro
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: sg01.iptr.xyz
+        Host: tro-sg04.gproxy.pro
 
   - name: PREMIUM 2
     server: 104.18.2.2
