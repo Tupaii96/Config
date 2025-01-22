@@ -156,12 +156,27 @@ proxies:
       headers:
         Host: tro-id05.gproxy.pro
 
+  - name: PREMIUM 3
+    type: trojan
+    server: 104.18.2.2
+    port: 443
+    password: 5c838a0a-013c-4088-8823-a2a50c66ae24
+    udp: true
+    sni: tro-id05.gproxy.pro
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/trojan-ws"
+      headers:
+        Host: tro-id05.gproxy.pro
+
 proxy-groups:
   - name: MAIN
     type: select
     proxies:
       - PREMIUM 1
       - PREMIUM 2
+      - PREMIUM 3
       - LOAD-BALANCE
       - BEST-PING
   - name: BEST-PING
@@ -172,6 +187,7 @@ proxy-groups:
     proxies: 
       - PREMIUM 1
       - PREMIUM 2
+      - PREMIUM 3
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
@@ -180,5 +196,6 @@ proxy-groups:
     proxies:
       - PREMIUM 1
       - PREMIUM 2
+      - PREMIUM 3
 rules:
   - MATCH,MAIN
