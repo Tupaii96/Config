@@ -130,7 +130,7 @@ dns:
 proxies:
   - name: PREMIUM 1
     type: trojan
-    server: 104.18.2.2
+    server: 104.17.3.81
     port: 443
     password: bda2d5aa-12bd-405a-842a-7a413c926770
     udp: true
@@ -143,20 +143,18 @@ proxies:
         Host: tro-sg04.gproxy.pro
 
   - name: PREMIUM 2
-    server: 104.18.2.2
+    type: trojan
+    server: 104.17.3.81
     port: 443
-    type: vless
-    uuid: e41c2e98-3de4-40de-af57-3503275e6dc9
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id5.fastw.us
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: id5.fastw.us
+    password: 5c838a0a-013c-4088-8823-a2a50c66ae24
     udp: true
+    sni: tro-id05.gproxy.pro
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/trojan-ws"
+      headers:
+        Host: tro-id05.gproxy.pro
 
 proxy-groups:
   - name: MAIN
