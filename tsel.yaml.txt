@@ -128,21 +128,21 @@ dns:
     - "*.mcdn.bilivideo.cn"
     - +.media.dssott.com
 proxies:
-  - name: PREMIUM 1
+  - name: XL 1
     type: trojan
     server: 104.17.3.81
     port: 443
-    password: bda2d5aa-12bd-405a-842a-7a413c926770
+    password: ad88d2f1-8c78-4d49-997c-08e65d889847
     udp: true
-    sni: tro-sg04.gproxy.pro
+    sni: tro-sg01.gproxy.gratis
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-sg04.gproxy.pro
+        Host: tro-sg01.gproxy.gratis
 
-  - name: PREMIUM 2
+  - name: XL 2
     type: trojan
     server: 104.17.3.81
     port: 443
@@ -156,7 +156,7 @@ proxies:
       headers:
         Host: tro-id05.gproxy.pro
 
-  - name: PREMIUM 3
+  - name: TSEL 1
     type: trojan
     server: 104.18.2.2
     port: 443
@@ -170,32 +170,42 @@ proxies:
       headers:
         Host: tro-id05.gproxy.pro
 
+  - name: TSEL 2
+    type: trojan
+    server: 104.18.2.2
+    port: 443
+    password: ad88d2f1-8c78-4d49-997c-08e65d889847
+    udp: true
+    sni: tro-sg01.gproxy.gratis
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/trojan-ws"
+      headers:
+        Host: tro-sg01.gproxy.gratis
+
+
 proxy-groups:
   - name: MAIN
     type: select
     proxies:
-      - PREMIUM 1
-      - PREMIUM 2
-      - PREMIUM 3
-      - LOAD-BALANCE
-      - BEST-PING
-  - name: BEST-PING
+      - XL
+      - TELKOMSEL
+  - name: XL
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
     tolerance: 50
     proxies: 
-      - PREMIUM 1
-      - PREMIUM 2
-      - PREMIUM 3
-  - name: LOAD-BALANCE
-    type: load-balance
-    strategy: consistent-hashing
+      - XL 1
+      - XL 2
+  - name: TELKOMSEL
+    type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 120
+    interval: 60
+    tolerance: 50
     proxies:
-      - PREMIUM 1
-      - PREMIUM 2
-      - PREMIUM 3
+      - TSEL 1
+      - TSEL 2
 rules:
   - MATCH,MAIN
