@@ -132,30 +132,30 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: jagoanssh-tupaiid
+    password: 8df821d1-1117-4d45-8731-09c1c9e52fa4
     udp: true
-    sni: id2go.ipservers.xyz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: "/trojan"
-      headers:
-        Host: id2go.ipservers.xyz
-
-  - name: JAGOAN 2
-    type: trojan
-    server: 104.18.2.2
-    port: 443
-    password: 398d7b26-c5cc-4717-b433-3d6cab2f26d5
-    udp: true
-    sni: trojan-sis-jp01.globalssh.xyz
+    sni: tro-sg01.gproxy.gratis
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: trojan-sis-jp01.globalssh.xyz
+        Host: tro-sg01.gproxy.gratis
 
+  - name: JAGOAN 2
+    type: trojan
+    server: 104.18.2.2
+    port: 443
+    password: a5135253-54b9-46e1-8a88-6860b9930ec1
+    udp: true
+    sni: tro-id05.gproxy.pro
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/trojan-ws"
+      headers:
+        Host: tro-id05.gproxy.pro
+        
 proxy-groups:
   - name: MAIN
     type: select
