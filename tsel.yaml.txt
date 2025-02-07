@@ -160,15 +160,15 @@ proxies:
     type: trojan
     server: 104.17.3.81
     port: 443
-    password: 6e51df0c-a9bc-4cf6-9002-8b273d804de8
+    password: 65016eda-3f8c-4810-ad77-e076fceb913e
     udp: true
-    sni: tro-sg01.gproxy.gratis
+    sni: tro-id05.gproxy.pro
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-sg01.gproxy.gratis
+        Host: tro-id05.gproxy.pro
 
   - name: TSEL 1
     type: trojan
