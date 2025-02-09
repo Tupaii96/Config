@@ -132,15 +132,15 @@ proxies:
     type: trojan
     server: 104.17.3.81
     port: 443
-    password: 51671a30-319c-4a9e-8023-1d40d20a11fa
+    password: f69df331-3949-468e-b6f4-f46e22c5d868
     udp: true
-    sni: tro-jp01.gproxy.gratis
+    sni: tro-id06.gproxy.pro
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-jp01.gproxy.gratis
+        Host: tro-id06.gproxy.pro
 
   - name: XL 2
     type: trojan
@@ -170,47 +170,6 @@ proxies:
       headers:
         Host: tro-id05.gproxy.pro
 
-  - name: TSEL 1
-    type: trojan
-    server: 104.18.2.2
-    port: 443
-    password: a5135253-54b9-46e1-8a88-6860b9930ec1
-    udp: true
-    sni: tro-id05.gproxy.pro
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: "/trojan-ws"
-      headers:
-        Host: tro-id05.gproxy.pro
-
-  - name: TSEL 2
-    type: trojan
-    server: 104.18.2.2
-    port: 443
-    password: 6e51df0c-a9bc-4cf6-9002-8b273d804de8
-    udp: true
-    sni: tro-sg01.gproxy.gratis
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: "/trojan-ws"
-      headers:
-        Host: tro-sg01.gproxy.gratis
-
-  - name: TSEL 3
-    type: trojan
-    server: 104.18.2.2
-    port: 443
-    password: 51671a30-319c-4a9e-8023-1d40d20a11fa
-    udp: true
-    sni: tro-jp01.gproxy.gratis
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: "/trojan-ws"
-      headers:
-        Host: tro-jp01.gproxy.gratis
 
 
 
@@ -221,11 +180,7 @@ proxy-groups:
       - XL 1
       - XL 2
       - XL 3
-      - TSEL 1
-      - TSEL 2
-      - TSEL 3
       - XL
-      - TELKOMSEL
   - name: XL
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -235,14 +190,5 @@ proxy-groups:
       - XL 1
       - XL 2
       - XL 3
-  - name: TELKOMSEL
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    proxies:
-      - TSEL 1
-      - TSEL 2
-      - TSEL 3
 rules:
   - MATCH,MAIN
