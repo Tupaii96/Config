@@ -132,7 +132,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 45e965d7-4f80-4be3-b312-532e9646876f
+    password: 0116fd21-43b8-4b79-99a8-ab74a2654c4b
     udp: true
     sni: tro-id01.gproxy.pro
     skip-cert-verify: true
