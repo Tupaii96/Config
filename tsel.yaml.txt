@@ -160,15 +160,15 @@ proxies:
     type: trojan
     server: 104.17.3.81
     port: 443
-    password: 65016eda-3f8c-4810-ad77-e076fceb913e
+    password: 447729de-8bd3-4d3f-ba06-9eddf883d973
     udp: true
-    sni: tro-id05.gproxy.pro
+    sni: tro-jp01.gproxy.gratis
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-id05.gproxy.pro
+        Host: tro-jp01.gproxy.gratis
 
 
 
