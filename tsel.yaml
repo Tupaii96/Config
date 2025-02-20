@@ -132,15 +132,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 0116fd21-43b8-4b79-99a8-ab74a2654c4b
+    password: 727e8b0e-b056-4fb6-b13b-03ecf3959a43
     udp: true
-    sni: tro-id01.gproxy.pro
+    sni: tro-id06.gproxy.pro
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-id01.gproxy.pro
+        Host: tro-id06.gproxy.pro
 
   - name: JAGOAN 2
     type: trojan
@@ -170,8 +170,8 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies: 
-      - JAGOAN 1
       - JAGOAN 2
+      - JAGOAN 1
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
