@@ -132,15 +132,15 @@ proxies:
     type: trojan
     server: 104.17.3.81
     port: 443
-    password: 19604bba-d5dc-44bb-be92-63bd7797a4d4
+    password: 80a68a39-a662-4822-a74a-b2066687a0ed
     udp: true
-    sni: tro-jp01.gproxy.gratis
+    sni: tro-sg05.gproxy.pro
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-jp01.gproxy.gratis
+        Host: tro-sg05.gproxy.pro
 
   - name: XL 2
     type: trojan
