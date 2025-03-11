@@ -168,7 +168,7 @@ proxies:
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: 9c20fd2c-e202-4075-a78d-abc0b255d771
+        Host: tro-sg01.gproxy.gratis
 
 
 
