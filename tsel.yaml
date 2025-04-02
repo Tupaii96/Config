@@ -132,7 +132,7 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: 332a3e5b-c93d-4345-ba17-07aa2746aaf0
+    password: 2ac17c2a-29da-4b98-8e95-9a0694e8d6c5
     udp: true
     sni: tro-id06.gproxy.pro
     skip-cert-verify: true
@@ -146,15 +146,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: c782d520-a8b8-4f0d-ad17-64368b2d09ac
+    password: 9fd94d11-f994-4495-85a3-7cdbb8a16d9c
     udp: true
-    sni: tro-id02.gproxy.pro
+    sni: tro-id13.gproxy.pro
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-id02.gproxy.pro
+        Host: tro-id13.gproxy.pro
         
 proxy-groups:
   - name: MAIN
