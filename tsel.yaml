@@ -146,15 +146,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: tupaiq
+    password: f8d45087-d63c-4b02-a99d-0debc2bf06ee
     udp: true
-    sni: id-qw001.beritanect.click
+    sni: tro-sg03.globalssh.cloud
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: "/trojan-go"
+      path: "/trojan-ws"
       headers:
-        Host: id-qw001.beritanect.click
+        Host: tro-sg03.globalssh.cloud
         
 proxy-groups:
   - name: MAIN
