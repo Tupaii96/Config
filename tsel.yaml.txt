@@ -160,15 +160,15 @@ proxies:
     type: trojan
     server: 104.17.3.81
     port: 443
-    password: cc464e28-4976-47a0-84a9-d9f712b8e3ac
+    password: f8d45087-d63c-4b02-a99d-0debc2bf06ee
     udp: true
-    sni: tro-sg01.globalssh.cloud
+    sni: tro-sg03.globalssh.cloud
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-sg01.globalssh.cloud
+        Host: tro-sg03.globalssh.cloud
 
 
 
