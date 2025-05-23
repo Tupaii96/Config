@@ -132,15 +132,15 @@ proxies:
     type: trojan
     server: 104.18.2.2
     port: 443
-    password: cc464e28-4976-47a0-84a9-d9f712b8e3ac
+    password: tupaisgdo
     udp: true
-    sni: tro-sg01.globalssh.cloud
+    sni: tro-sgdo002.ayows.web.id
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-ws"
       headers:
-        Host: tro-sg01.globalssh.cloud
+        Host: tro-sgdo002.ayows.web.id
 
   - name: JAGOAN 2
     type: trojan
