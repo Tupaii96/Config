@@ -155,20 +155,21 @@ proxies:
       path: "/trojan-go"
       headers:
         Host: id-qw001.beritanect.click
-
   - name: XL 3
-    type: trojan
     server: 104.17.3.81
     port: 443
-    password: f8d45087-d63c-4b02-a99d-0debc2bf06ee
-    udp: true
-    sni: tro-sg03.globalssh.cloud
+    type: vless
+    uuid: 3993348c-c560-4fb0-8114-1c7aa9eca401
+    cipher: auto
+    tls: true
     skip-cert-verify: true
+    servername: vls-id02.globalssh.cloud
     network: ws
     ws-opts:
-      path: "/trojan-ws"
+      path: /vless-ws
       headers:
-        Host: tro-sg03.globalssh.cloud
+        Host: vls-id02.globalssh.cloud
+    udp: true
 
 
 
