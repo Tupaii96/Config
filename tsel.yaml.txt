@@ -143,18 +143,20 @@ proxies:
         Host: tro-sgdo002.tunggure.buzz
 
   - name: XL 2
-    type: trojan
     server: 104.17.3.81
     port: 443
-    password: tupaiq
-    udp: true
-    sni: id-qw001.beritanect.click
+    type: vless
+    uuid: 25b1b07e-a46e-403c-afd3-6bd2e915bcd4
+    cipher: auto
+    tls: true
     skip-cert-verify: true
+    servername: vls-id01.globalssh.cloud
     network: ws
     ws-opts:
-      path: "/trojan-go"
+      path: /vless-ws
       headers:
-        Host: id-qw001.beritanect.click
+        Host: vls-id01.globalssh.cloud
+    udp: true
   - name: XL 3
     server: 104.17.3.81
     port: 443
