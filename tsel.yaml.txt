@@ -132,15 +132,15 @@ proxies:
     type: trojan
     server: 104.17.3.81
     port: 443
-    password: tupaisgdo
+    password: tupaiikd
     udp: true
-    sni: tro-sgdo002.tunggure.buzz
+    sni: id-ikd001.kegiatanja.my.id
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: "/trojan-go"
       headers:
-        Host: tro-sgdo002.tunggure.buzz
+        Host: id-ikd001.kegiatanja.my.id
 
   - name: XL 2
     server: 104.17.3.81
