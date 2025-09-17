@@ -171,6 +171,5 @@ proxy-groups:
     proxies: 
       - XL 1
       - XL 2
-      - XL 3
 rules:
   - MATCH,MAIN
