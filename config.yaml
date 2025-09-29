@@ -130,45 +130,45 @@ dns:
 proxies:
   - name: IKD
     type: trojan
-    server: 104.18.3.2
+    server: 162.159.140.159
     port: 443
-    password: data123
+    password: tupaiikd
     udp: true
-    sni: trojan-ikd-id01.globalssh.xyz
+    sni: id-ikd001.kegiatanja.my.id
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /trojan-go
       headers:
-        Host: trojan-ikd-id01.globalssh.xyz
+        Host: id-ikd001.kegiatanja.my.id
 
   - name: Ovh1
     type: trojan
-    server: 104.18.3.2
+    server: 162.159.140.159
     port: 443
-    password: 9f0f1e8e-6c82-4dd4-bc82-1231377e1706
+    password: tupaisgdo
     udp: true
-    sni: trojan-sg01.globalssh.xyz
+    sni: tro-sgdo002.tunggure.buzz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /trojan-go
       headers:
-        Host: trojan-sg01.globalssh.xyz
+        Host: tro-sgdo002.tunggure.buzz
 
   - name: UAS id
     type: trojan
-    server: 104.18.3.2
+    server: 162.159.140.159
     port: 443
-    password: data123
+    password: tupaisgdo
     udp: true
-    sni: trojan-uas-id01.globalssh.xyz
+    sni: tro-sgdo002.tunggure.buzz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /trojan-go
       headers:
-        Host: trojan-uas-id01.globalssh.xyz
+        Host: tro-sgdo002.tunggure.buzz
 proxy-groups:
   - name: MAIN
     type: select
