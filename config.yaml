@@ -16,23 +16,23 @@ profile:
   store-fake-ip: true
 dns:
   enable: true
-  ipv6: false
-  use-host: true
-  enhanced-mode: fake-ip
-  listen: 0.0.0.0:7874
-  nameserver:
-    - 8.8.8.8
-    - 1.0.0.1
-    - https://dns.google/dns-query
-  fallback:
-    - 1.1.1.1
-    - 8.8.4.4
-    - https://cloudflare-dns.com/dns-query
-    - 112.215.203.254
   default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
-    - 112.215.203.254
+  - 1.1.1.1
+  - 1.0.0.1
+  - 8.8.8.8
+  nameserver:
+  - 8.8.8.8
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  respect-rules: true
+  fallback:
+  - 8.8.8.8
+  proxy-server-nameserver:
+  - 114.114.114.114
+  - 119.29.29.29
+  - 8.8.8.8
+  - 1.1.1.1
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - "*.lan"
