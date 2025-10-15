@@ -33,7 +33,7 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
-  proxy-server-namerserver:
+  proxy-server-nameserver:
     - 112.215.203.254
     - 112.215.198.254
   respect-rule: true
